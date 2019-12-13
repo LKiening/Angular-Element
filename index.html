@@ -1,0 +1,32 @@
+<html>
+    <header>
+        <!-- Bootstrap Css. Wird nur genutzt damit der Button besser aussieht ;) -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Laden der Angular-Element-Komponente-->
+        <script src="./angular-app/preview/angularapp.js"></script>
+    </header>
+
+    <body>
+        <div style="text-align:center; margin-top: 50px; margin-bottom: 50px;">
+            <button type="button" 
+                    class="btn btn-primary"
+                    onclick="getNewJoke()"> 
+                next joke
+            </button>
+        </div>
+
+        <app-hello-world></app-hello-world>     <!-- custom component -->
+    </body>
+
+    <script>
+        const component = document.querySelector('app-hello-world');
+
+        // Output der Komponente verarbeiten
+        component.addEventListener('fetched', (event) =>  console.log("Success", event));
+
+        // Neuen Input setzen
+        // Ein Funktionsaufruf in der Komponente ist nicht möglich, es muss ein definiertes Inputelement gesetzt werden
+        getNewJoke = () => component.setAttribute('newjoke', Math.random());  
+    </script>
+
+</html>
