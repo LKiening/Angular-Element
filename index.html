@@ -15,18 +15,23 @@
             </button>
         </div>
 
-        <app-hello-world></app-hello-world>     <!-- custom component -->
+        <app-hello-world id="customElementOne"></app-hello-world>     <!-- custom component -->
+        <app-hello-world id="customElementTwo"></app-hello-world>      <!-- custom component -->   
     </body>
 
     <script>
-        const component = document.querySelector('app-hello-world');
+        const component1 = document.querySelector('#customElementOne');
+        const component2 = document.querySelector('#customElementTwo');
 
         // Output der Komponente verarbeiten
-        component.addEventListener('fetched', (event) =>  console.log("Success", event));
+        component1.addEventListener('fetched', (event) =>  console.log("Success", event));
 
         // Neuen Input setzen
         // Ein Funktionsaufruf in der Komponente ist nicht möglich, es muss ein definiertes Inputelement gesetzt werden
-        getNewJoke = () => component.setAttribute('newjoke', Math.random());  
+        getNewJoke = () => {
+            component1.setAttribute('newjoke', Math.random());  
+            component2.setAttribute('newjoke', Math.random());  
+        }
     </script>
 
 </html>
