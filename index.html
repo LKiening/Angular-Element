@@ -2,8 +2,19 @@
     <header>
         <!-- Bootstrap Css. Wird nur genutzt damit der Button besser aussieht ;) -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!-- <script type="text/javascript" src="https://unpkg.com/zone.js"></script> -->
+
+
+        <!-- https://medium.com/@sri1980/multiple-angular-elements-apps-loading-in-one-window-7bcc95887ff4 -->
+
+
+        
         <!-- Laden der Angular-Element-Komponente-->
         <script src="./angular-app/preview/angularapp.js"></script>
+        <script src="./angular-app-2/preview/angularapp2.js"></script>
+
+        
     </header>
 
     <body>
@@ -15,9 +26,8 @@
             </button>
         </div>
 
-        <app-hello-world id="customElementOne"></app-hello-world>     <!-- custom component -->
-        <app-hello-world id="customElementTwo"></app-hello-world>      <!-- custom component -->   
-    </body>
+        <app-hello-world id="customElementOne"></app-hello-world>      <!-- custom component -->
+        <two id="customElementTwo"></two>    <!-- custom component -->
 
     <script>
         const component1 = document.querySelector('#customElementOne');

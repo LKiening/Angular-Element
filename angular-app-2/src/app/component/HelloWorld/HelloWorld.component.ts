@@ -16,7 +16,7 @@ export class HelloWorldComponent implements OnChanges {
 	@Output() private fetched = new EventEmitter();
 
 	constructor(private cd: ChangeDetectorRef) {}
-
+	
     ngOnChanges() {
         this.getNewJoke();
     }
