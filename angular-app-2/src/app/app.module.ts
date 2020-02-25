@@ -1,4 +1,3 @@
-import { element } from 'protractor';
 import { HelloWorldComponent } from './component/HelloWorld/HelloWorld.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injector } from '@angular/core';
