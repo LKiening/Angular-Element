@@ -20,7 +20,7 @@ import { createCustomElement } from '@angular/elements'
 export class AppModule {
   constructor(injector: Injector) {
     const custom = createCustomElement(HelloWorldComponent, { injector });
-    customElements.define('two', custom);
+    customElements.define('app-two', custom);
   }
   ngDoBootstrap() {}
 }
